@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import withLayout from "../components/withLayout";
+import Layout from "../components/Layout";
 
 const Page = () => {
   const {
@@ -7,11 +7,11 @@ const Page = () => {
   } = useRouter();
 
   return (
-    <>
+    <Layout>
       <h1>{title}</h1>
       <p>This is the blog post content.</p>
-    </>
+    </Layout>
   );
 };
 
-export default withLayout(Page);
+export default Page;
